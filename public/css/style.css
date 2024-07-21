@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html {
+	width: 100%;
+	height: 100%
+}
+
+.container {
+    display: flex;
+}
+
+body {
+	width: 100%;
+    height: 100%;
+	background-image: url("../img/home-background.png");
+	background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif
+}
+
+h1 {
+    color: rgb(29, 29, 29);
+}
+
+#form {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.876);
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #5d2f02;
+}
+
+#usuario, #senha, #entrar {
+    width: 200px;
+    box-shadow: 1px 1px 3px #5d2f02;
+    border-radius: 3px;
+}
+
+#usuario, #senha {
+    border: 1px solid rgba(112, 59, 26, 0.35);
+    height: 25px;
+    padding: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#entrar {
+    border: none;
+    background-color: #5d2f02;
+    color: white;
+    font-weight: bolder;
+    height: 30px;
+}
+
+#entrar:hover {
+    position: relative;
+    bottom: 2px;
+    background-color: #422101;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Esse eu já li! - Login</title>
 </head>
-<body>
-    
+<body class="container">
+    <main>
+        <form id="form" class="container" action="/" method="POST">
+            <h1>Esse eu já li!</h1>
+            <div>
+                <label for="nome">Usuário</label><br>
+                <input type="text" id="usuario" name="usuario" autofocus required>
+            </div>
+            <div>
+                <label for="senha">Senha</label><br>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <button type="submit" id="entrar">Entrar</button>
+        </form>
+    </main>
+    <footer class="container">
+        Desenvolvido por Reginaldo G. Santos
+    </footer>
+    <script src="/js/script.js"></script>
 </body>
 </html>
