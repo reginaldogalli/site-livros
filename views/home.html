@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style-home.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navstyle.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <title>Esse eu já li! - Home</title>
-    <script src="/js/script.js" defer></script>
+    <script src="/js/home.js" defer></script>
 </head>
 <body>
-    <h1>Bem-vindo à página inicial!</h1>
-    <button id="sair">Sair</button>
+    <header class="container">
+        <h2>Olá&nbsp;<span id="nomeUsuario">usuário</span></h2>
+        <nav class="container">
+            <nav>
+                <div>
+                    <ul>
+                        <input type="checkbox" id="checkbox_toggle" />
+                        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                        <div class="menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="info-usuario.html">Meus dados</a></li>
+                            <li><a href="ranking.html">Ranking</a></li>
+                            <li><button id="sair">Sair</button></li>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+    <main>
+        <div class="main">
+            <div id="livros-lista" class="div-livro">
+                <!-- Livros serão carregados aqui -->
+            </div>
+        </div>
+    </main>
+    <footer class="container">
+        Desenvolvido por Reginaldo G. Santos
+    </footer>
 </body>
 </html>

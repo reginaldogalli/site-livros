@@ -3,7 +3,6 @@ const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const path = require('path');
 const session = require('express-session');
-
 const app = express();
 const port = 3001;  // Porta configurada para 3001
 
@@ -58,10 +57,19 @@ app.post("/", (req, res) => {
             console.error('Erro na consulta ao banco de dados:', error);
             return res.status(500).json({ message: 'Erro interno do servidor.' });
         }
+        
         console.log('Resultados da consulta:', results);
+        
         if (results.length > 0) {
+            // Suponha que o nome do usuário esteja no primeiro resultado
+            const nomeUsuario = results[0].nome; // Ajuste o campo conforme a estrutura da sua tabela
+            
             req.session.usuario = usuario;
-            res.json({ success: true, redirect: '/home' });
+            res.json({
+                success: true,
+                nomeUsuario: nomeUsuario, // Incluindo o nome do usuário na resposta
+                redirect: '/home'
+            });
         } else {
             res.status(401).json({ success: false, message: 'Usuário ou senha inválidos.' });
         }
@@ -84,4 +92,15 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
+});
+
+app.get('/api/livros', isAuthenticated, (req, res) => {
+    const query = 'SELECT * FROM livros'; // Ajuste a consulta conforme sua tabela
+    db.query(query, (error, results) => {
+        if (error) {
+            console.error('Erro na consulta ao banco de dados:', error);
+            return res.status(500).json({ message: 'Erro interno do servidor.' });
+        }
+        res.json(results); // Retorna os resultados da consulta como JSON
+    });
 });

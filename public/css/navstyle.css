@@ -1,0 +1,134 @@
+header {
+    width: 100%;
+    background-color: #5d2f02;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    z-index:2;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px #6a6a6a;
+}
+
+.navlink, #title {
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.navlink, #title {
+    margin: 12px 25px 12px 25px;
+}
+
+nav {
+    background-color: #5d2f02;
+    text-align: right;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+
+  nav ul {
+    background-color: #5d2f02;
+  }
+  
+  nav a, #sair {
+    display: inline-block;
+    margin: 0;
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul a:hover {
+    font-weight: bold;
+  }
+
+  #sair:hover {
+    font-weight: bold;
+  }
+  
+  nav ul li:hover > .dropdown-menu {
+    display: block;
+  }
+
+  .fa-chevron-down {
+    color: #fff;
+    font-size: small;
+    margin-left: 2px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color:  rgb(240, 237, 237);
+    box-shadow: 1px 1px 5px #6a6a6a;
+    width: 150px;
+    border-radius: 5px;
+    z-index: 2;
+  }
+  
+  .dropdown-menu li {
+    display: block;
+    text-align:justify;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: #727272;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color:  rgb(223, 223, 223);
+    border-radius: 5px;
+  }
+
+  input[type=checkbox]{
+    display: none;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+  }
+  
+  @media (max-width: 1280px) {
+    .menu { 
+     display:none;
+     background-color:#5d2f02;
+     text-align: right;
+     position: relative;
+     left: 3px;
+     width: 127px;
+    }
+    .menu li:hover {
+     display: inline-block;
+     background-color:#5d2f02;
+     transition: 0.3s ease;
+    }
+   
+    input[type=checkbox]:checked ~ .menu{
+     display: block;
+    }
+    .hamburger {
+     display: block;
+     color: white;
+     font-size: 2em;
+     margin-right: 10px;
+    }
+   
+    .dropdown li:hover {
+     background-color: rgb(223, 223, 223);
+     width: 100%;
+    }
+    }
