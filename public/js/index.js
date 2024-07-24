@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
               .then(result => {
                   if (result.success) {
                       localStorage.setItem('usuarioNome', result.nomeUsuario); // Armazena o nome no localStorage
+                      localStorage.setItem('usuarioId', result.idUsuario);
                       window.location.href = result.redirect; // Redireciona em caso de sucesso
                   } else {
                       alert(result.message); // Exibe a mensagem de erro em um alerta

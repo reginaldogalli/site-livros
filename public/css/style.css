@@ -49,7 +49,7 @@ h2 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 400px;
+    width: 300px;
     height: 250px;
     background-color: rgba(255, 255, 255, 0.876);
     border-radius: 5px;
@@ -228,4 +228,17 @@ footer {
     border-radius: 3px;
   }
 
-  
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+th, td {
+    padding: 5px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
